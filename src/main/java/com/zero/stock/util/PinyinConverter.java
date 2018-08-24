@@ -1,4 +1,4 @@
-package com.zero.stock.utils;
+package com.zero.stock.util;
 
 /**
  * 获取首字母 目前使用了无字典的方式 ，若发现bug做记录，并换成字典库的方式(pinyin4j.jar)
