@@ -7,6 +7,8 @@ import com.zero.stock.domain.Stock;
 
 @Mapper
 public interface StockMapper {
+	int updateStockBases(List<Stock> lStocks);
 	int updateStockBase(Stock stock);
+	boolean insertStockBase(Stock stock) ;
 	List<Stock> listAll();
 }

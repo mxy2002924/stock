@@ -1,7 +1,7 @@
 package com.zero.stock.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.zero.stock.utils.PinyinConverter;
+import com.zero.stock.util.PinyinConverter;
 
 public class Stock {	
 	public int id;
