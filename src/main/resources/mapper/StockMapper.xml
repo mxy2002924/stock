@@ -21,14 +21,13 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zero.stock.mapper.StockMapper">
 	<insert id="insertStockBase" parameterType="Stock">
-		INSERT INTO fund_stock(name,ename,funds,proportion,share,sharedrift,rank)
-		values (#{name},#{ename},#{funds},#{proportion},#{share},#{sharedrift},#{rank})
+		INSERT INTO fund_stock(name,ename,funds,proportion,share,sharedrift)
+		values (#{name},#{ename},#{funds},#{proportion},#{share},#{sharedrift})
 	</insert>
     <update id="updateStockBase" parameterType="Stock">
         UPDATE fund_stock  
             SET name = #{name},ename = #{ename},funds= #{funds},
-            proportion=#{proportion},share=#{share},sharedrift=#{sharedrift},
-            rank=#{rank}
+            proportion=#{proportion},share=#{share},sharedrift=#{sharedrift}           
          WHERE code = #{code}	
     </update>
     
@@ -36,9 +35,8 @@
     <foreach collection="list" item="item" index="index" open="" close="" separator=";">
         update fund_stock
         <set>
-            name = ${item.name},ename = ${item.ename},funds= ${item.funds},
-            proportion=${item.proportion},share=${item.share},sharedrift=${item.sharedrift},
-            rank=${item.rank}
+            name = '${item.name}',ename = '${item.ename}',funds= ${item.funds},
+            proportion=${item.proportion},share=${item.share},sharedrift=${item.sharedrift}            
         </set>
         where code = ${item.code}
     </foreach>

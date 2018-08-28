@@ -26,8 +26,7 @@ public class Stock {
 	public float share;	//持仓总数量  万股
 	
 	@JsonProperty("ccbd")
-	public float sharedrift; 	//持股变动 万股
-	public int  rank;			// 排名
+	public float sharedrift; 	//持股变动 万股	
 	
 	public String getEname() {
 		return PinyinConverter.getPinyinIntial(name);
